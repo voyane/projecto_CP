@@ -1,0 +1,119 @@
+<t name="Contact Us" t-name="website.contactus">
+    <t t-call="website.layout">
+      <t t-set="logged_partner" t-value="request.env['website.visitor']._get_visitor_from_request().partner_id"/>
+      <t t-set="contactus_form_values" t-value="{                 'email_to': res_company.email,                 'name': request.params.get('name', ''),                 'phone': request.params.get('phone', ''),                 'email_from': request.params.get('email_from', ''),                 'company': request.params.get('company', ''),                 'subject': request.params.get('subject', ''),             }"/>
+      <span class="hidden" data-for="contactus_form" t-att-data-values="contactus_form_values"/>
+      <div id="wrap" class="oe_structure oe_empty">
+        <section class="s_title pt40 pb40 o_colored_level" data-vcss="001" data-snippet="s_title" data-name="Title" style="background-image: none;">
+          <div class="container s_allow_columns">
+            <p>
+              <br/>
+            </p>
+            <p style="text-align: center;"><span style="font-size: 36px;"><strong><font style="color: rgb(184, 134, 11); font-family: serif;">Estamos Prontos para Tornar Seu Evento Inesquecível</font></strong></span>​</p>
+            <p style="text-align: center;">
+              <font style="color: rgb(184, 134, 11);">
+                <span style="font-size: 24px; font-family: sans-serif;">&amp;nbsp;Temos o prazer de ajudar a transformar suas ideias em realidade. Estamos
+   &amp;nbsp;à disposição para fornecer o suporte necessário, entre em contato connosco por telefone, e-mail ou através do nosso formulário, e &amp;nbsp;juntos&amp;nbsp;criaremos uma experiência única que atenda todas as suas expectativas. E
+   stamos aqui para ouvir, planeiar e surpreender, não espere o momento perfeito. Crie-o connosco!</span>
+              </font>
+              <br/>
+            </p>
+          </div>
+        </section>
+        <section class="s_text_block o_colored_level pb0 pt16" data-snippet="s_text_block" style="background-color: rgba(195, 164, 97, 0.94) !important; background-image: none;" data-name="Custom Custom Text">
+          <div class="s_allow_columns container-fluid">
+            <div class="row" data-original-title="" title="" aria-describedby="tooltip968818">
+              <div class="mt-4 mt-lg-0 o_colored_level pt0 pb0 col-lg-3 offset-lg-2 o_we_force_no_transition" style="">
+                <p>
+                  <img class="img-fluid o_we_custom_image o_we_force_no_transition" src="/web/image/254834-6ee1f091/_MG_1673-min.png" alt="" data-original-title="" title="" aria-describedby="tooltip87277" style="color: rgb(184, 134, 11); position: relative; top: -90px; margin: 0px auto; border-top-left-radius: 400px; border-top-right-radius: 400px; text-align: center; width: 100% !important;" loading="lazy" data-original-id="254832" data-original-src="/web/image/254832-5cfb311d/_MG_1673-min.png" data-mimetype="image/png" data-resize-width="690"/>
+                </p>
+              </div>
+              <div class="mt-4 mt-lg-0 o_colored_level col-lg-5 pt8" style="">
+                <section class="s_website_form pt184" data-vcss="001" data-snippet="s_website_form" data-name="Form">
+                  <div class="container">
+                    <form id="contactus_form" action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-model_name="mail.mail" data-success-mode="redirect" data-success-page="/contactus-thank-you" data-pre-fill="true">
+                      <div class="s_website_form_rows row s_col_no_bgcolor">
+                        <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required col-lg-12" data-type="char" data-name="Field">
+                          <label class="s_website_form_label" style="width: 200px;" for="o2l9ebimgmbw">
+                            <span class="s_website_form_label_content o_default_snippet_text">Nome</span>
+                            <span class="s_website_form_mark o_default_snippet_text">        *</span>
+                          </label>
+                          <input type="text" style="border-radius: 20px;" class="form-control s_website_form_input" name="Nome" required="1" placeholder="" id="o2l9ebimgmbw" data-fill-with="name"/>
+                        </div>
+                        <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_required" data-type="char" data-name="Field">
+                          <label class="s_website_form_label " style="width: 200px" for="oxzrsxzk0kuq">
+                            <span class="s_website_form_label_content o_default_snippet_text">E-mail</span>
+                            <span class="s_website_form_mark o_default_snippet_text">          *</span>
+                          </label>
+                          <input type="text" style="border-radius: 20px;" class="form-control s_website_form_input" name="email_from" required="1" placeholder="" id="oxzrsxzk0kuq" data-fill-with="email"/>
+                        </div>
+                        <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 col-lg-12 s_website_form_custom" data-type="char" data-name="Field">
+                          <label class="s_website_form_label " style="width: 200px" for="o7g6fpbnywx4">
+                            <span class="s_website_form_label_content o_default_snippet_text">Contacto</span>
+                          </label>
+                          <input type="text" style="border-radius: 20px;" class="form-control s_website_form_input" name="Contacto" value="" placeholder="" id="o7g6fpbnywx4" data-fill-with="phone"/>
+                        </div>
+                        <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_required" data-type="char" data-name="Field">
+                          <label class="s_website_form_label " style="width: 200px" for="op7hdk5r3eha">
+                            <span class="s_website_form_label_content o_default_snippet_text">Tipo de Evento</span>
+                            <span class="s_website_form_mark o_default_snippet_text">          *</span>
+                          </label>
+                          <input type="text" style="border-radius: 20px;" class="form-control s_website_form_input" name="subject" required="1" value="" placeholder="" id="op7hdk5r3eha" data-fill-with="undefined"/>
+                        </div>
+                        <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_custom col-lg-6" data-type="date" data-name="Field">
+                          <label class="s_website_form_label " style="width: 200px" for="o6sb8zx4zlud">
+                            <span class="s_website_form_label_content o_default_snippet_text">Data</span>
+                          </label>
+                          <div class="s_website_form_date input-group date" id="datepicker5813760648735139" data-target-input="nearest">
+                            <input type="text" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px; text-align: center;" class="form-control datetimepicker-input s_website_form_input" data-target="#datepicker5813760648735139" name="Data" placeholder="" id="o6sb8zx4zlud" data-fill-with="commercial_company_name"/>
+                            <div class="input-group-append" data-target="#datepicker5813760648735139" data-toggle="datetimepicker">
+                              <div class="input-group-text">
+                                <i class="fa fa-calendar"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-type="integer" data-name="Field">
+                          <label class="s_website_form_label " style="width: 200px" for="og9uwe8qss28">
+                            <span class="s_website_form_label_content o_default_snippet_text">No. de Convidados</span>
+                          </label>
+                          <input style="border-radius: 20px;" type="number" class="form-control s_website_form_input" name="No. de Convidados" step="1" value="" placeholder="" id="og9uwe8qss28" data-fill-with="commercial_company_name"/>
+                        </div>
+                        <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 col-lg-12 s_website_form_custom s_website_form_required" data-type="text" data-name="Field">
+                          <label class="s_website_form_label " style="width: 200px" for="o2tv24x4zxik">
+                            <span class="s_website_form_label_content o_default_snippet_text">Mensagem</span>
+                            <span class="s_website_form_mark o_default_snippet_text">                  *</span>
+                          </label>
+                          <textarea style="border-radius: 20px;" class="form-control s_website_form_input" name="Mensagem" required="1" placeholder="" id="o2tv24x4zxik" rows="2"/>
+                        </div>
+                        <div class="form-group s_website_form_field col-12    s_website_form_dnone" data-name="Field">
+                          <div class="row s_col_no_resize s_col_no_bgcolor">
+                            <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px">
+                              <span class="s_website_form_label_content"/>
+                            </label>
+                            <div class="col-sm">
+                              <input type="hidden" class="form-control s_website_form_input" name="email_to" value="info@yourcompany.example.com"/>
+                              <div class="s_website_form_field_description small form-text text-muted">
+              Separate email addresses with a comma.
+          </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group col-12 s_website_form_submit col-lg-3 offset-lg-9" data-name="Submit Button">
+                          <div style="width: 200px;" class="s_website_form_label"/>
+                          <a href="#" role="button" class="s_website_form_send btn btn-custom text-black btn-lg" data-original-title="" title="" style="border-width: 1px; border-style: solid; background-color: rgb(200, 31, 32); border-radius: 20px;" aria-describedby="popover665371">&amp;nbsp; &amp;nbsp; &amp;nbsp; <strong>&amp;nbsp;Enviar&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;</strong></a>
+                          <span id="s_website_form_result"/>
+                          <br/>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </t>
+  
