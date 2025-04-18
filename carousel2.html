@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Carousel</title>
+    <style>
+        body {
+            background-color: #2e3537;
+            margin: 0;
+            padding: 0;
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card {
+            border-radius: 20px;
+            position: absolute;
+            width: 300px;
+            height: 60vh;
+            padding: 20px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 0;
+            will-change: transform, opacity;
+            animation: carousel 15s linear infinite;
+        }
+
+        .card img {
+            width: 80vh;
+            height: 60vh;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .card:nth-child(1) {
+            animation-delay: -3s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 3s;
+        }
+
+        .card:nth-child(4) {
+            animation-delay: 6s;
+        }
+
+        .card:nth-child(5) {
+            animation-delay: 9s;
+        }
+
+        @keyframes carousel {
+            0% {
+                transform: translateY(100%) scale(0.5);
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            3%, 20% {
+                transform: translateY(100%) scale(0.7);
+                opacity: 0.4;
+                visibility: visible;
+            }
+
+            23%, 40% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            43%, 60% {
+                transform: translateY(-100%) scale(0.7);
+                opacity: 0.4;
+                visibility: visible;
+            }
+
+            63% {
+                transform: translateY(-100%) scale(0.7);
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            100% {
+                transform: translateY(-100%) scale(0.5);
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="card">
+            <img src="imagens/elegant-wedding-tables-min-min.png" alt="Decoração">
+        </div>
+        <div class="card">
+            <img src="imagens/pretty-little-white-brown-cupcakes-stand-tired-dish-min-min.png" alt="Catering">
+        </div>
+        <div class="card">
+            <img src="imagens/3d-music-related-scene-min-min.png" alt="Aluguer">
+        </div>
+        <div class="card">
+            <img src="imagens/WhatsApp Image 2024-11-11 at 2.42.26 PM (8)-min-min.png" alt="Contacte-nos">
+        </div>
+        <div class="card">
+            <img src="imagens/_MG_1678-min-min.jpg" alt="Pessoal">
+        </div>
+    </div> 
+</body>
+</html>

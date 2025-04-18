@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Carousel com Desfoque</title>
+  <style>
+    body {
+      background-color: #000;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .carousel {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      position: absolute;
+    width: 120vh;
+      height: 80vh; 
+      border-radius: 2px;
+      overflow: hidden;
+      opacity: 0;
+      will-change: transform, opacity, filter;
+      animation: carousel 15s linear infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .card img {
+      width: 100vh;
+      height: 100vh;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transition: filter 0.5s ease;
+    }
+
+    .card .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+
+    .card .overlay h2 {
+      margin: 0;
+      font-size: 48px;
+      font-family: 'Georgia', serif;
+    }
+
+    .card .overlay p {
+      margin-top: 10px;
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+
+    /* Controle de cada card */
+    .card:nth-child(1) { animation-delay: -6s; }
+    .card:nth-child(2) { animation-delay: 0s; }
+    .card:nth-child(3) { animation-delay: 6s; }
+    .card:nth-child(4) { animation-delay: 12s; }
+    .card:nth-child(5) { animation-delay: 18s; }
+
+    @keyframes carousel {
+      0% {
+        transform: translateY(100%) scale(0.5);
+        opacity: 0;
+        filter: blur(5px);
+        visibility: hidden;
+      }
+      5%, 25% {
+        transform: translateY(50%) scale(0.8);
+        opacity: 0.5;
+        filter: blur(3px);
+        visibility: visible;
+      }
+      30%, 50% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        filter: blur(0);
+        visibility: visible;
+      }
+      55%, 75% {
+        transform: translateY(-50%) scale(0.8);
+        opacity: 0.5;
+        filter: blur(3px);
+        visibility: visible;
+      }
+      80% {
+        transform: translateY(-100%) scale(0.5);
+        opacity: 0;
+        filter: blur(5px);
+        visibility: hidden;
+      }
+      100% {
+        transform: translateY(-100%) scale(0.5);
+        opacity: 0;
+        filter: blur(5px);
+        visibility: hidden;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <div class="card">
+      <img src="imagens/elegant-wedding-tables-min-min.png" alt="Decoração">
+      <div class="overlay">
+        <h2>Decoração</h2>
+        <p>REALIZE A BELEZA DO SEU EVENTO</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="imagens/pretty-little-white-brown-cupcakes-stand-tired-dish-min-min.png" alt="Catering">
+      <div class="overlay">
+        <h2>Catering</h2>
+        <p>OS MELHORES SABORES PARA SUA FESTA</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="imagens/3d-music-related-scene-min-min.png" alt="Aluguer">
+      <div class="overlay">
+        <h2>Aluguer</h2>
+        <p>EQUIPAMENTOS PARA QUALQUER EVENTO</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="imagens/WhatsApp Image 2024-11-11 at 2.42.26 PM (8)-min-min.png" alt="Contacte-nos">
+      <div class="overlay">
+        <h2>Contacte-nos</h2>
+        <p>ESTAMOS À SUA DISPOSIÇÃO</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="imagens/_MG_1678-min-min.jpg" alt="Pessoal">
+      <div class="overlay">
+        <h2>Pessoal</h2>
+        <p>EQUIPE PROFISSIONAL PARA O SEU DIA</p>
+      </div>
+    </div>
+  </div> 
+</body>
+</html>
