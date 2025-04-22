@@ -1,0 +1,14 @@
+<button onclick="mostrarMensagem()">Click em Mim!</button>
+<script>
+    function mostrarMensagem(){
+        alert("Seja bem vindo ao JavaScript.");
+    }
+
+    function mudarTexto() {
+        document.getElementById("meuTitulo").innerText = "Titulo alterado com JavaScript";
+        document.getElementById("meuTitulo").style.color = "blue";
+    }
+</script>
+
+<h2 id="meuTitulo"> Ola, visitante!</h2>
+<button onclick="mudarTexto"> Clique aqui para mudar o texto</button>
