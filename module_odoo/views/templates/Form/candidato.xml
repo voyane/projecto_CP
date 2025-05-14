@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <template id="candidato" name="Cadastro da Candidato">
+
+        <style>
+            .carousel-item img {
+            object-fit: cover;
+            height: 100vh;
+            }
+
+            .font_weight{
+            font-weight: 700;
+            }
+
+            .customtop{
+            font: bold;
+            }
+
+            @font-face {
+            font-family: 'Azonix';
+            src: url(/ntizu/static/src/Fonts/Azonix.otf);
+            }
+
+            .stylebutton {
+            background-color: #678C2E;
+            border-color: #678C2E;
+            font-family: 'Azonix', sans-serif;
+            font-weight: 700;
+            }
+
+            .style_p {
+            color: rgba(255, 255, 255, .5);
+            text-align: center;
+            font-size: 1rem;
+
+            }
+
+            .style {
+            color: #6a9c1e;
+            font-weight: 700;
+            line-height: 1.2;
+            font-size: calc(1.325rem + .9vw);
+            }
+
+            @font-face {
+            font-family: 'Montserrat';
+            src: url(/ntizu/static/src/Fonts/Montserrat-VariableFont_wght.ttf);
+            }
+
+            .font {
+            font-family: 'Azonix';
+            font-size: calc(1.375rem + 1.5vw);
+            font-weight: 300;
+            line-height: 1.2;
+            }
+
+            .stylebutton {
+            background-color: #678C2E;
+            border-color: #678C2E;
+            font-family: 'Azonix', sans-serif;
+            }
+
+            .customstyle {
+            padding: 8px 36px;
+            border-radius: px;
+            background-image: url(/ntizu/static/src/Imagens/Teclado_verde.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: none;
+            color: white;
+            font-family: 'Azonix', sans-serif;
+            font-size: small;
+            }
+
+            .button {
+            border: none;
+            background: none;
+            color: rgba(29, 26, 26, 0.5);
+            }
+
+            .customwith {
+            width: 85%;
+            background-color: #f1f1f1;
+            padding: 30px;
+            border-radius: 10px;
+            background: linear-gradient(to bottom, #69912c, #105E39 14%, #f1f1f1 10%);
+
+            }
+            .lado {
+            margin-left: 10%;
+            }
+
+            @media (max-width: 768px) {
+            .customwith {
+            width: 100% !important;
+            padding: 10px;
+            }
+
+            .customtop {
+            margin-top: initial;
+            }
+
+            .lado {
+            margin-left: initial;
+            }
+
+            .custom-container {
+            background-image: url(/ntizu/static/src/Imagens/Background1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 10%;
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+            display: none;
+            }
+
+            .carousel-caption {
+            right: 4%;
+            left: 4%;
+            }
+            }
+        </style>
+
+        <section class="empresa">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/ntizu/static/src/Imagens/background3.png" class="d-block w-100" alt="..."/>
+                        <div class="carousel-caption text-center">
+                            <div class="d-flex align-items-center w-100 vh-100   justify-content-center">
+                                <div class="">
+                                    <h4 class="font">Quer emprego ?</h4>
+                                    <h3 class="style">E so clicar</h3>
+                                    <p class="mb-0 style_p">Com a Ntizu pode aceder a vagas de emprego locais e
+                                        internacionais
+                                    </p>
+                                    <p class="style_p">Recrutamento nao e uma batalha sem fim.</p>
+                                    <h3 class="mb-5 font_weight">Cadastre-se hoje e deixe-nos agilizar o processo para
+                                        si
+                                    </h3>
+
+                                    <form method="POST" action="/candidato/submit"
+                                          class="customwith lado text-center  ">
+                                        <h3 class="text-white position-absolute customtop">Candidato</h3>
+                                        <div class="mb-3 mt-5">
+                                            <input type="text" name="nome" class="form-control border-0 p-2"
+                                                   id="exampleInputEmail1"
+                                                   aria-describedby="emailHelp" placeholder="Nome Completo"/>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="email" name="email" class="form-control border-0 p-2"
+                                                   id="exampleInputPassword1"
+                                                   placeholder="Exemplo@gmail.com"/>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" name="profissao" class="form-control border-0 p-2"
+                                                   id="exampleInputPassword1"
+                                                   placeholder="Profissão ..."/>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="tel" name="telefone" class="form-control border-0 p-2"
+                                                   id="exampleInputPassword1"
+                                                   placeholder="Numero de telefone"/>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <input type="text" name="apelido" class="form-control border-0 p-2"
+                                                   id="exampleInputPassword1"
+                                                   placeholder="Apelido"/>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <button type="submit" class=" button ">
+                                                <img class="vertil"
+                                                     src="Landing_page/chevron-left.svg" alt=""/>
+                                                Voltar
+                                            </button>
+                                            <button type="submit" class=" customstyle ">Submit</button>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </template>
+</odoo>

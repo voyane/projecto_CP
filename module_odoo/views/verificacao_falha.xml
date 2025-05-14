@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <template id="verificacao_falha">
+        <t t-call="website.layout">
+            <div class="container">
+                <h2>Verificação falhou</h2>
+                <p>O token inserido está incorreto. Tente novamente.</p>
+
+            </div>
+        </t>
+
+    </template>
+
+
+</odoo>

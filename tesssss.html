@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @font-face {
+          font-family: 'Gladies';
+          src: url('./Gladies\ Regular/Gladies.otf') format('opentype'); /* Substitua com o link real */
+        }
+        
+        h1.custom-gladies {
+          font-family: 'Gladies';
+          font-size: 3rem;
+          font-weight: 200;
+          text-align: center;
+          color: rgb(184, 134, 11);
+          background-color: black;
+        }
+        </style>
+        
+</head>
+<body>
+    <h1><center>Hello Good Morning</center></h1>
+
+
+    <?xml version="1.0"?>
+    <data inherit_id="website.layout">
+        <xpath expr="//footer//span[hasclass('o_footer_copyright_name')]" position="replace">
+            <span class="o_footer_copyright_name mr-2">Copyright &amp;copy; Company name</span>
+        </xpath>
+    </data>
+    
+    
+
+</body>
+</html>

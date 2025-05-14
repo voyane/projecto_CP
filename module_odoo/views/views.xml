@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="ntizu.list">
+      <field name="name">ntizu list</field>
+      <field name="model">ntizu.ntizu</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="ntizu.action_window">
+      <field name="name">ntizu window</field>
+      <field name="res_model">ntizu.ntizu</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="ntizu.action_server">
+      <field name="name">ntizu server</field>
+      <field name="model_id" ref="model_ntizu_ntizu"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="ntizu" id="ntizu.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="ntizu.menu_1" parent="ntizu.menu_root"/>
+    <menuitem name="Menu 2" id="ntizu.menu_2" parent="ntizu.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="ntizu.menu_1_list" parent="ntizu.menu_1"
+              action="ntizu.action_window"/>
+    <menuitem name="Server to list" id="ntizu" parent="ntizu.menu_2"
+              action="ntizu.action_server"/>
+-->
+  </data>
+</odoo>

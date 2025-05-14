@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="wrapper" name="Custom Layout">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <style>
+
+            @font-face {
+            font-family: "Azonix";
+            src: url(/ntizu/static/src/Fonts/Azonix.otf);
+            }
+
+            @font-face {
+            font-family: "Montserrat";
+            src: url(/ntizu/static/src/Fonts/Montserrat-VariableFont_wght.ttf);
+            }
+
+            body {
+            margin: 0 !important;
+            padding: 0 !important;
+            }
+
+            .full-container {
+            width: 100%;
+            height: 100vh;
+            background-image: url('/ntizu/static/src/Imagens/texture-web.svg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            }
+
+            .centrar-conteudo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            }
+
+            .largura {
+            width: 208px;
+            }
+
+            .fs-size {
+            font-size: 2.25rem;
+            line-height: 2.25rem;
+            font-weight: 400;
+            font-style: normal;
+            color: #003e24;
+            font-family: "Azonix";
+            }
+
+            .custom-primary {
+            font-size: 10px;
+            font-weight: bold;
+            color: #003e24; /* ajuste conforme sua preferência */
+            }
+
+            .token-input-container {
+            display: flex;
+            gap: 10px; /* Espaçamento entre os quadradinhos */
+            margin-top: 20px;
+            }
+
+            .token-input {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: #d1d5db;
+            border: none;
+            border-radius: 5px;
+            font-family: "Montserrat";
+            outline: none;
+            }
+
+            .bg-button {
+            background: linear-gradient(
+            140deg,
+            rgb(0, 97, 64) 28.95%,
+            rgb(116, 156, 7) 100%,
+            rgba(116, 156, 7, 0.47) 98.86%
+            );
+            box-shadow: rgb(0, 0, 0) 3px 3px 8px;
+            border: none;
+            font-family: "Azonix";
+            font-weight: 400;
+            font-style: normal;
+            }
+
+            .text-custom {
+            --tw-text-opacity: 1;
+            color: rgb(0 62 36 / var(--tw-text-opacity));
+            }
+
+            .bg-none {
+            background: none;
+            }
+
+        </style>
+
+        <div class="full-container">
+            <div class="centrar-conteudo">
+                <img class="largura" src="/ntizu/static/src/Imagens/verify-email.svg" alt=""/>
+                <h3 class="fs-size mb-0">
+                    VERIFIQUE SEU E-MAIL PARA PROSSEGUIR
+                </h3>
+                <p class="custom-primary mb-0">
+                    Acabamos de enviar um código para o seu e-mail.
+                </p>
+                <form method="POST" action="/token/submit">
+
+                     <input type="hidden" name="candidato_id" t-att-value="candidato_id"/>
+
+                    <div class="token-input-container">
+
+                        <input name="token1" type="text" maxlength="1" class="token-input"/>
+                        <input name="token2" type="text" maxlength="1" class="token-input"/>
+                        <input name="token3" type="text" maxlength="1" class="token-input"/>
+                        <input name="token4" type="text" maxlength="1" class="token-input"/>
+                        <input name="token5" type="text" maxlength="1" class="token-input"/>
+                        <input name="token6" type="text" maxlength="1" class="token-input"/>
+
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center gap-5 mt-3">
+                        <div class="mt-3 d-flex align-items-center justify-content-center gap-5">
+                            <button class="text-custom fw-bold px-5 py-2 rounded-pill transition d-inline-block bg-none">
+                                Reenviar
+                            </button>
+
+                            <button type="submit"
+                                    class="text-white fw-bold px-5 py-2 rounded-pill transition d-inline-block bg-button">
+                                Enviar
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+            const inputs = document.querySelectorAll('.token-input');
+
+            inputs.forEach((input, index) => {
+            input.addEventListener('input', () => {
+            if (input.value.length === 1 &amp;&amp; index &lt; inputs.length - 1) {
+            inputs[index + 1].focus();
+            }
+            });
+
+            input.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' &amp;&amp; input.value.length === 0 &amp;&amp; index &gt; 0) {
+            inputs[index - 1].focus();
+            }
+            });
+            });
+            });
+        </script>
+
+    </template>
+</odoo>

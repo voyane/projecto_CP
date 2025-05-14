@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+
+    <template id="section" name="sectionnne ">
+
+        <style>
+            @font-face {
+            font-family: 'Azonix';
+            src: url(/ntizu/static/src/Fonts/Azonix.otf);
+            }
+
+            @font-face {
+            font-family: 'cairo';
+            src: url(/ntizu/static/src/Fonts/Cairo-VariableFont_slnt,wght.ttf);
+            }
+
+            @font-face {
+            font-family: 'Montserrat';
+            src: url(/ntizu/static/src/Fonts/Montserrat-VariableFont_wght.ttf);
+            }
+
+            .custombg{
+            background-image: url(/ntizu/static/src/Imagens/garantia.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+
+            .title h1 {
+            font-family: 'Cairo';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 64px;
+            line-height: 94.3%;
+
+            text-transform: capitalize;
+            }
+
+            .paragrafo p {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            color: #FFFFFF;
+            }
+
+            .custom-size {
+            width: 519px;
+            }
+
+            .customheight {
+            height: @font-face
+            font-family: 'Azonix';
+            src: url(/ntizu/static/src/Fonts/Azonix.otf);
+            }
+
+            @font-face {
+            font-family: 'cairo';
+            src: url(/ntizu/static/src/Fonts/Cairo-VariableFont_slnt,wght.ttf);
+            }
+
+            @font-face {
+            font-family: 'Montserrat';
+            src: url(/ntizu/static/src/Fonts/Montserrat-VariableFont_wght.ttf);
+            }671px
+            }
+
+
+            .custtompadding {
+            padding: 3rem;
+            }
+
+            .plus {
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 60px;
+            border: 3px solid var(--Gradiente-titulos, #749C07);
+            background: #D9D9D9;
+            box-shadow: 10px 9px 9px 0px rgba(0, 0, 0, 0.25);
+            display: inline-block;
+
+            }
+
+            .plus span {
+            font-family: 'Montserrat';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            text-transform: capitalize;
+            background: linear-gradient(93.25deg, #749C07 -47.79%, #749C07 -47.79%, #003E24 127.99%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            }
+
+
+            .plus img {
+            width: 25px;
+            vertical-align: bottom;
+            }
+
+            .customheight {
+            height: 670px;
+            }
+
+            @media only screen and (max-width: 1990px) {
+            .custommargin {
+            margin-right: 100px;
+            }
+            }
+
+            @media only screen and (max-width: 1990px) {
+            .custommargin {
+            margin-right: 100px;
+            }
+
+            .custom-size {
+            width: 450px;
+            }
+            }
+
+            @media only screen and (max-width: 1200px) {
+            .customheight {
+            height: 870px;
+            }
+
+            }
+
+            @media only screen and (max-width: 960px) {
+            .custom-size {
+            width: 350px;
+
+            }
+
+            .title h1 {
+            font-size: 44px;
+            }
+
+            .custommargin {
+            margin-right: 80px;
+            }
+
+            }
+
+            @media only screen and (max-width: 768px) {
+            .custom-size {
+            width: 300px;
+            }
+
+            .custommargin {
+            margin-right: 0px;
+            }
+
+            .title h1 {
+            font-size: 38px;
+            }
+
+            .paragrafo p {
+            font-size: 20px;
+
+            }
+            }
+
+            @media only screen and (max-width: 640px) {
+            .custom-size {
+            width: 160px;
+            height: 240px;
+            }
+
+            .paragrafo {}
+
+            .title h1 {
+            font-size: 38px;
+            }
+
+            .paragrafo p {
+            font-size: 16px;
+            width: initial;
+            }
+
+
+            .custtompadding {
+            padding: initial;
+            }
+
+            .custommargin {
+            margin-right: initial;
+            }
+
+            .plus {
+            width: 60%;
+            font-size: 14.577px;
+            }
+
+            .plus span {
+            font-size: 14.577px;
+            }
+
+            .plus img {
+            vertical-align: bottom;
+            }
+            }
+
+
+            @media only screen and (max-width: 500px) {
+            .custom-size {
+            width: 160px;
+            height: 240px;
+            }
+
+            .paragrafo {}
+
+            .title h1 {
+            font-size: 38px;
+            }
+
+            .paragrafo p {
+            font-size: 16px;
+            width: initial;
+            }
+
+
+            .custtompadding {
+            padding: initial;
+            }
+
+            .custommargin {
+            margin-right: initial;
+            }
+
+            .plus {
+            width: 60%;
+            font-size: 12.577px;
+            }
+
+            .plus span {
+            font-size: 12.577px;
+            }
+
+            .plus img {
+            vertical-align: bottom;
+            }
+
+            .customheight {
+            height: 670px;
+            }
+            }
+        </style>
+
+        <section class="section1">
+
+            <div class="container-fluid custombg bg-image customheight p-5 position-relative mb-5">
+                <div class="row align-items-center h-100 custtompadding ">
+                    <div class="col-md-6 mb-5">
+                        <div class="title mb-5">
+                            <h1 class="text-white mb-0">Nada Vale mais</h1>
+                            <h1 class="text-white">Que seu Conforto</h1>
+                        </div>
+
+                        <div class="paragrafo">
+                            <p>Por isso, a Ntizu - Job Connections seleciona as vagas e os candidatos a dedo. Assim pode
+                                ter
+                                certeza que qualquer conexão feita na plataforma é verificada e segura. Diga adeus a
+                                todo stress
+                                e
+                                medo que vinha com a busca pelo emprego ou candidato perfeito.
+                            </p>
+
+                        </div>
+
+                        <a class="plus" href="">
+                            <img src="/ntizu/static/src/Imagens/plus-circle.svg" alt="" loading="lazy"/>
+                            <span>Encontre
+                                Aqui o Seu conforto
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 ">
+                        <div class=" bottom-0 end-0 custommargin  position-absolute mr-5" style="bottom: 0;">
+                            <img class="img-fluid custom-size" src="/ntizu/static/src/Imagens/mulhersorrindo.png"
+                                 alt=""></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+
+</odoo>

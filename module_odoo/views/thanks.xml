@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <template id="thank_you">
+        <t t-call="website.layout">
+            <div class="container">
+                <h2>Verificação bem-sucedida!</h2>
+                <p>Bem-vindo,<t t-esc="candidato.nome"/>!
+                </p>
+                <a href="/outra_pagina" class="btn btn-primary">Continuar</a>
+            </div>
+        </t>
+
+    </template>
+
+
+</odoo>

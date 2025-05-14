@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="formweb" name="Message form">
+
+        <style>
+            @font-face {
+            font-family: 'Azonix';
+            src: url(/ntizu/static/src/Fonts/Azonix.otf);
+            }
+
+            input.form-control {
+            border-radius: 60px;
+            padding: 15px;
+            background: #E9E9E9;
+            border: none;
+            }
+
+
+            textarea.form-control {
+            padding: 15px;
+            background: #D9D9D9;
+            border-radius: 30px;
+            border: none;
+            }
+
+            input.form-control:focus,
+            textarea.form-control:focus {
+            outline: none;
+            box-shadow: none;
+            }
+
+            .btn-custom {
+            border-radius: 60px;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #749C07 4.59%, #006140 100%);
+            color: white;
+            border: none;
+            font-size: 18px;
+            }
+
+            .btn-custom span {
+            font-family: 'Azonix'
+            }
+        </style>
+
+
+        <section class="form web">
+
+
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-2 d-none d-md-block">
+                        <img class="img-fluid" src="/ntizu/static/src/Imagens/HOMEMAOTELEFONE.png" alt=""/>
+                    </div>
+
+                    <div class="col-md-10 ">
+                        <div class="row">
+                            <div class="col-12 col-md-5 mt-4">
+                                <label class="mb-2 label-tyle" for="">Full Name</label>
+                                <input type="text" placeholder="Enter your full name" class="form-control"/>
+                            </div>
+
+                            <div class="col-12 col-md-5 mt-4">
+                                <label class="mb-2 label-tyle" for="">Email</label>
+                                <input type="email" placeholder="Enter your email" class="form-control"/>
+                            </div>
+
+                            <div class="col-12 col-md-5 mt-4">
+                                <label class="mb-2 label-tyle" for="">Phone Number</label>
+                                <input type="text" placeholder="Enter your phone number" class="form-control"/>
+                            </div>
+
+                            <div class="col-12 col-md-5 mt-4">
+                                <label class="mb-2 label-tyle" for="">Address</label>
+                                <input type="text" placeholder="Enter your address" class="form-control"/>
+                            </div>
+
+                            <div class="col-12 col-md-10 mt-4">
+                                <label class="mb-2 label-tyle" for="">Additional Information</label>
+                                <textarea placeholder="Enter additional information" class="form-control"
+                                          rows="4"></textarea>
+
+                                <div class="mt-3 d-flex justify-content-end">
+                                    <button class="btn-custom px-5">
+                                        <span>Enviar</span>
+                                    </button>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </template>
+
+
+</odoo>

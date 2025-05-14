@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="blotemplate" name="Blog Template">
+
+        <style>
+            @font-face {
+            font-family: 'Azonix';
+            src: url(/ntizu/static/src/Fonts/Azonix.otf);
+            }
+
+            @font-face {
+            font-family: 'Montserrat';
+            src: url(/ntizu/static/src/Fonts/Montserrat-VariableFont_wght.ttf);
+            }
+
+            @font-face {
+            font-family: 'cairo';
+            src: url(/ntizu/static/src/Fonts/Cairo-VariableFont_slnt,wght.ttf);
+            }
+
+            .style {
+            color: #6a9c1e;
+            font-weight: 700;
+            line-height: 1.2;
+            font-size: calc(1.325rem + .9vw);
+            }
+
+            .versus h1 {
+            font-family: 'Cairo';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            background: linear-gradient(91.4deg, #006140 -7.5%, #749D08 47.28%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            }
+
+            .center {
+            border: 2px solid #749C07;
+            padding: 5px;
+            border-radius: 40px;
+            background: linear-gradient(91deg, #003E24 -7.5%, #749D08 47.28%);
+            font-family: 'Cairo';
+            text-decoration: none;
+            width: 35%;
+            white-space: nowrap;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+
+            .center a span {
+            color: #FEFEFE;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            text-decoration: none
+            }
+
+            #prev,
+            #next {
+            filter: invert(1);
+            }
+
+            .versus .verde-escuro {
+            color: #003E24;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            }
+
+            .versus .verde-normal {
+            color: #003E24;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            }
+
+
+            /* card blog*/
+            .direction {
+            text-align: center;
+            }
+
+            .direction button {
+            font-family: cursive;
+            font-weight: bold;
+            background-color: #ffffff44;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: 0.5s;
+            margin: 0 10px;
+            }
+
+            .direction button:hover {
+            background-color: #ffffff;
+            }
+
+            .items {
+            border-radius: 15px;
+            width: 270px;
+            height: 400px;
+            overflow: hidden;
+            transition: 0.5s;
+            margin: 10px;
+            scroll-snap-align: start;
+            }
+
+            .contents {
+            height: 100%;
+            background-image: linear-gradient(to bottom, #1f4e72, #ECECF2);
+            position: relative;
+            }
+
+            .contents img {
+            width: 100%;
+            height: 100%;
+            }
+
+            #list {
+            display: flex;
+            width: max-content;
+            }
+
+            #formlist {
+            max-width: 100%;
+            overflow: auto;
+            margin: 100px auto 50px;
+            scroll-behavior: smooth;
+            scroll-snap-type: both;
+
+            }
+
+            .ddddd {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+            .pintura {
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            opacity: 0.5;
+            text-align: center;
+            }
+
+            .pintura p {
+            padding: 10px;
+            }
+
+            #formlist::-webkit-scrollbar {
+            display: none;
+            }
+
+            @media screen and (max-width: 1024px) {
+            .items {
+            width: calc(33.3vw - 20px);
+            }
+
+            .direction {
+            display: none;
+            }
+            }
+
+            @media screen and (max-width: 768px) {
+            .items {
+            width: calc(40vw - 20px);
+            }
+
+            .direction {
+            display: none;
+            }
+            }
+
+            @media screen and (max-width: 640px) {
+            .items {
+            width: calc(70vw - 20px);
+            }
+
+            .direction {
+            display: none;
+            }
+
+            .center {
+            width: 80%;
+            }
+            }
+
+            #formlist center {
+            margin-top: 40px;
+
+            }
+        </style>
+
+        <section class="blogsection" name="Blog section">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="versus text-center">
+                        <h1>Informação é poder</h1>
+                        <p class="mb-0 verde-normal">Nunca deve estar desprevenido. Queremos lhe ajudar não só a
+                            encontrar
+                        </p>
+                        <p class="verde-normal mb-0">vagas ou candidatos perfeitos, mas a estar capacitado para os
+                            desafios
+                            que
+                            irá enfrentar.
+                        </p>
+                        <p class="verde-escuro">
+                            <span>Leia os artigos abaixo para se posicionar acima da competição.</span>
+                        </p>
+                    </div>
+
+                    <div>
+                        <div class="ddddd">
+                            <div id="formlist">
+                                <div id="list">
+                                    <div class="items">
+
+                                        <div class="contents">
+                                            <img src="/ntizu/static/src/Imagens/team.jpg"
+                                                 alt="" loading="lazy"/>
+                                            <div class="pintura" onclick="abrirLink()">
+                                                <p style="color: white">Como elaborar um contrato para seu
+                                                    colaborador?
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="items">
+
+                                        <div class="contents">
+
+                                            <img src="/ntizu/static/src/Imagens/team.jpg"
+                                                 alt="" loading="lazy"/>
+                                            <div class="pintura">
+                                                <p style="color: white">lfjgfkdg</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="items">
+
+                                        <div class="contents">
+                                            <img src="Imagens/AdobeStock_571518300.jpeg" alt="" loading="lazy"/>
+                                            <div class="pintura">
+                                                <p style="color: white">lfjgfkdg</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="items">
+
+                                        <div class="contents">
+                                            <img src="/ntizu/static/src/Imagens/colegas-masculinos.jpg" alt=""
+                                                 loading="lazy"/>
+                                            <div class="pintura">
+                                                <p style="color: white">lfjgfkdg</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="items">
+
+                                        <div class="contents">
+                                            <img src="/ntizu/static/src/Imagens/colegas-masculinos.jpg" alt=""
+                                                 loading="lazy"/>
+                                            <div class="pintura">
+                                                <p style="color: white">lfjgfkdg</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="center">
+                                <div>
+                                    <img id="prev" src="/ntizu/static/src/Imagens/chevron_left.svg" alt=""/>
+                                </div>
+
+                                <div>
+                                    <a href="" style="text-decoration: none;">
+                                        <span>Leia mais</span>
+                                    </a>
+                                </div>
+
+                                <div>
+                                    <img id="next" src="/ntizu/static/src/Imagens/chevron_right.svg" alt=""/>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </template>
+
+</odoo>

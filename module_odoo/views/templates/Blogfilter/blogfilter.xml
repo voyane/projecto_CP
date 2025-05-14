@@ -1,0 +1,60 @@
+<odoo>
+    <template id="visualizacao" name="Blog View">
+
+        <style>
+            @font-face {
+            font-family: 'Montserrat';
+            src: url('/ntizu/static/src/Fonts/Montserrat-VariableFont_wght.ttf');
+            }
+
+            .blogtext h1 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 54px;
+            line-height: 66px;
+            text-transform: capitalize;
+            color: #FFFFFF;
+            }
+        </style>
+        <t t-call="website.layout">
+            <div class="wrap">
+                <div class="container-fluid">
+
+
+                    <div class="custombg bg-image d-flex align-items-center justify-content-center"
+                         t-attf-style="background-image: url('#{image_url}');background-position:center; background-repeat: no-repeat;background-size: cover; height: 500px;">
+                        <div class=" d-flex align-items-center justify-content-center">
+                            <div class="blogtext w-50 text-center">
+                                <h1>
+                                    <t t-esc="key_value.post_title"/>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container mt-5">
+                        <div class="row">
+
+
+                            <p>
+                                <t t-esc="key_value.author"/>
+                            </p>
+
+                            <p>
+                                <t t-esc="key_value.content"/>
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </t>
+
+
+    </template>
+</odoo>

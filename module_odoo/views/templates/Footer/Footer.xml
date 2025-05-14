@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="footerwb" name="Footer">
+
+        <style>
+            .footer {
+            background: linear-gradient(186deg, #006738 -39.79%, #216720 49.55%, #88A816 128.29%);
+            }
+
+            @font-face {
+            font-family: 'Azonix';
+            src: url(/ntizu/static/src/Fonts/Azonix.otf);
+            }
+
+            @font-face {
+            font-family: 'cairo';
+            src: url(/ntizu/static/src/Fonts/Cairo-VariableFont_slnt,wght.ttf);
+            }
+
+            @font-face {
+            font-family: 'Montserrat';
+            src: url(/ntizu/static/src/Fonts/Montserrat-VariableFont_wght.ttf);
+            }
+
+            .links {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            }
+
+            .footercol {
+            font-family: 'Azonix';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 68px;
+            line-height: 89px;
+            text-transform: capitalize;
+            color: #FFFFFF;
+            position: absolute;
+            top: 0;
+            }
+
+            .footer p a {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 15px;
+            text-transform: capitalize;
+            color: #FEFEFE;
+            }
+
+            .footer h4 {
+            position: relative;
+            margin-bottom: 30px;
+            color: #FFF;
+            font-family: Montserrat;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            text-transform: capitalize;
+
+            }
+        </style>
+
+        <section>
+
+            <footer class="footer text-white pt-5 pb-4 ">
+                <div class="container  text-md-left">
+                    <div class="row  text-md-left">
+                        <div class="mr-5 mt-5">
+                            <h5 class="footercol mb-0 mt-3">Ntizu</h5>
+                        </div>
+
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+
+                            <h5 class="text-uppercase mb-4 font-weight ">Job Connection</h5>
+                            <p>
+                                <a href="">(+258) 00 000 0000</a>
+                            </p>
+
+                        </div>
+
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h5 class="text-uppercase mb-4 font-weight-bold">Menu</h5>
+                            <p>
+                                <a href="#" class="text-white" style="text-decoration: none;">Facebook</a>
+                            </p>
+                            <p>
+                                <a href="#" class="text-white" style="text-decoration: none;">Linkedin</a>
+                            </p>
+                            <p>
+                                <a href="#" class="text-white" style="text-decoration: none;">instagram</a>
+                            </p>
+
+                        </div>
+
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h5 class="text-uppercase mb-4 font-weight-bold">Redes Sociais</h5>
+                            <p>
+                                <a href="#" class="text-white" style="text-decoration: none;">TheProviders</a>
+                            </p>
+                            <p>
+                                <a href="#" class="text-white" style="text-decoration: none;">TheProviders</a>
+                            </p>
+                            <p>
+                                <a href="#" class="text-white" style="text-decoration: none;">TheProviders</a>
+                            </p>
+
+                        </div>
+
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h5 class="text-uppercase mb-4 font-weight-bold ">Useful links</h5>
+                            <div class="links">
+                                <p>
+                                    <a href="#" class="text-white" style="text-decoration: none;">
+                                        <img src="Imagens/modoDeIsolamento-1.png" alt=""/>
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#" class="text-white" style="text-decoration: none;"></a>
+                                    <img src="/ntizu/static/src/Imagens/modoDeIsolamento.png" alt=""/>
+                                </p>
+                                <p>
+                                    <a href="#" class="text-white" style="text-decoration: none;">
+                                        <img src="/ntizu/static/src/Imagens/modoDeIsolamento-2.png" alt=""/>
+                                    </a>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="Copyright text-center mt-5">
+                        <p>Copyright © 2023 . Ntizu All rights reserve</p>
+                    </div>
+
+                </div>
+
+            </footer>
+
+        </section>
+
+    </template>
+
+
+</odoo>

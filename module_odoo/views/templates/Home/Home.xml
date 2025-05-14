@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="Home" name="Home">
+        <style>
+            .carousel-item img {
+            object-fit: cover;
+            height: 100vh;
+            }
+
+            @font-face {
+            font-family: 'Azonix';
+            src: url(/ntizu/static/src/Fonts/Azonix.otf);
+            }
+
+            .stylebutton {
+            background-color: #678C2E;
+            border-color: #678C2E;
+            font-family: 'Azonix', sans-serif;
+            font-weight: 700;
+            }
+
+            .style_p {
+            color: rgba(255, 255, 255, .5);
+            text-align: center;
+            font-size: 1rem;
+            }
+
+            .font_weight{
+            font-weight: 700;
+            }
+
+            .style {
+            color: #6a9c1e;
+            font-weight: 700;
+            line-height: 1.2;
+            font-size: calc(1.325rem + .9vw);
+            }
+
+            @font-face {
+            font-family: 'Montserrat';
+            src:
+            url(/ntizu/static/src/Fonts/Montserrat-VariableFont_wght.ttf);
+            }
+
+            .font {
+            font-family: 'Azonix';
+            font-size: calc(1.375rem + 1.5vw);
+            font-weight: 300;
+            line-height: 1.2;
+
+            }
+        </style>
+
+        <section class="Home">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/ntizu/static/src/Imagens/background3.png"
+                             class="d-block w-100" alt="..."/>
+                        <div class="carousel-caption text-center">
+                            <div class="d-flex align-items-center w-100 vh-100   justify-content-center">
+                                <div class="">
+                                    <h4 class="font">Quer emprego ?</h4>
+                                    <h3 class="style">E so clicar</h3>
+                                    <p class="mb-0 style_p">Com a Ntizu pode aceder a vagas de emprego locais e
+                                        internacionais
+                                    </p>
+                                    <p class="style_p">Recrutamento nao e uma batalha sem fim.</p>
+                                    <h3 class="mb-5 font_weight">Cadastre-se hoje e deixe-nos agilizar o processo para
+                                        si
+                                    </h3>
+
+                                    <a href="#" class="btn p-2 stylebutton mt-3 me-2 text-white px-4">CANDIDATO</a>
+                                    <a href="#" class="btn p-2 stylebutton mt-3 text-white  px-4">EMPRESA</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/ntizu/static/src/Imagens/Background2.png" class="d-block w-100" alt="..."/>
+                        <div class="carousel-caption text-center">
+                            <div class="d-flex align-items-center w-100 vh-100   justify-content-center">
+                                <div class="">
+                                    <h4 class="font">Quer emprego ?</h4>
+                                    <h3 class="style">E so clicar</h3>
+                                    <p class="mb-0 style_p">Com a Ntizu pode aceder a vagas de emprego locais e
+                                        internacionais
+                                    </p>
+                                    <p class="style_p">Recrutamento nao e uma batalha sem fim.</p>
+                                    <h3 class="mb-5 font_weight">Cadastre-se hoje e deixe-nos agilizar o processo para
+                                        si
+                                    </h3>
+
+                                    <a href="#" class="btn p-2 stylebutton mt-3 me-2 text-white px-4">CANDIDATO</a>
+                                    <a href="#" class="btn p-2 stylebutton mt-3 text-white  px-4">EMPRESA</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="\ntizu\static\src\Imagens\Background1.png" class="d-block w-100" alt="..."/>
+                        <div class="carousel-caption text-center">
+                            <div class="d-flex align-items-center w-100 vh-100   justify-content-center">
+                                <div class="">
+                                    <h4 class="font">Quer emprego ?</h4>
+                                    <h3 class="style">E so clicar</h3>
+                                    <p class="mb-0 style_p">Com a Ntizu pode aceder a vagas de emprego locais e
+                                        internacionais
+                                    </p>
+                                    <p class="style_p">Recrutamento nao e uma batalha sem fim.</p>
+                                    <h3 class="mb-5 font_weight">Cadastre-se hoje e deixe-nos agilizar o processo para
+                                        si
+                                    </h3>
+
+                                    <a href="#" class="btn p-2 stylebutton mt-3 me-2 text-white px-4">CANDIDATO</a>
+                                    <a href="#" class="btn p-2 stylebutton mt-3 text-white  px-4">EMPRESA</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+
+    </template>
+
+
+</odoo>

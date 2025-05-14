@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="snippet_id" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']" position="before">
+            <div class="o_panel_body">
+                <t t-snippet="ntizu.Home"
+                   t-thumbnail="/ntizu/static/src/Imagens/download.jpeg"/>
+
+                <t t-snippet="ntizu.candidato"
+                   t-thumbnail="/ntizu/static/src/Imagens/empresa.png"/>
+
+                <t t-snippet="ntizu.blotemplate"
+                   t-thumbnail="/ntizu/static/src/Imagens/blogsection.png"/>
+
+                <t t-snippet="ntizu.candidatonew"
+                   t-thumbnail="/ntizu/static/src/Imagens/company.png"/>
+
+                <t t-snippet="ntizu.sectiontree"
+                   t-thumbnail="/ntizu/static/src/Imagens/banner.png"/>
+
+                <t t-snippet="ntizu.section"
+                   t-thumbnail="/ntizu/static/src/Imagens/section.png"/>
+
+                <t t-snippet="ntizu.empresa"
+                   t-thumbnail="/ntizu/static/src/Imagens/Untitled.png"/>
+
+                <t t-snippet="ntizu.footerwb"
+                   t-thumbnail="/ntizu/static/src/Imagens/footer.png"/>
+
+                <t t-snippet="ntizu.homepage"
+                   t-thumbnail="/ntizu/static/src/Imagens/homePage.png"/>
+
+                 <t t-snippet="ntizu.formweb"
+                   t-thumbnail="/ntizu/static/src/Imagens/webform.png"/>
+
+            </div>
+        </xpath>
+    </template>
+</odoo>
+

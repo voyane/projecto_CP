@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="homepage" name="Home Page">
+
+
+        <style>
+            @font-face {
+            font-family: 'Azonix';
+            src: url(/ntizu/static/src/Fonts/Azonix.otf);
+            }
+
+            @font-face {
+            font-family: 'Montserrat';
+            src: url(/ntizu/static/src/Fonts/Montserrat-VariableFont_wght.ttf);
+            }
+
+            @font-face {
+            font-family: 'cairo';
+            src: url(/ntizu/static/src/Fonts/Cairo-VariableFont_slnt,wght.ttf);
+            }
+
+            .font {
+            font-family: 'Azonix';
+            font-size: calc(1.375rem + 1.5vw);
+            font-weight: 300;
+            line-height: 1.2;
+
+            }
+
+            .job-link {
+            color: white;
+            text-decoration: none;
+            }
+
+            .job-link:hover {
+            text-decoration: underline;
+            }
+
+            .style {
+            color: #6a9c1e;
+            font-weight: 700;
+            line-height: 1.2;
+            font-size: calc(1.325rem + .9vw);
+            }
+
+
+            .carousel-item .carousel-img {
+            object-fit: cover;
+            height: 100vh;
+            }
+
+            .caption {
+            transform: translateY(-40%);
+            }
+
+            .caption {
+            right: 0;
+            left: 0;
+            position: absolute;
+            bottom: 1.25rem;
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+            color: #fff;
+
+            }
+
+            .fontcard {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 9.62874px;
+            color: #FFFFFF;
+            width: 166px;
+            }
+
+            .stylebutton {
+            background-color: #678C2E;
+            border-color: #678C2E;
+            font-family: 'Azonix', sans-serif;
+            font-weight: 700;
+            }
+
+            .conteudo {
+            padding: 10px;
+            height: 227.08299px;
+            height: 36px;
+
+            }
+
+            @media screen and (max-width: 640px) {
+            .item {
+            width: calc(100vw - 20px);
+            height: 150px;
+            }
+
+            .carousel-img {
+            object-fit: cover;
+            object-position: center;
+
+            }
+            }
+
+            /* card blog*/
+            .direction {
+            text-align: center;
+            }
+
+            .direction button {
+            font-family: cursive;
+            font-weight: bold;
+            background-color: #ffffff44;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: 0.5s;
+            margin: 0 10px;
+            }
+
+            .direction button:hover {
+            background-color: #ffffff;
+            }
+
+            .Item {
+            border-radius: 15px;
+            width: 262.32px;
+            height: 134px;
+            overflow: hidden;
+            transition: 0.5s;
+            margin: 10px;
+            scroll-snap-align: start;
+            }
+
+            .custommb-5 {
+            margin-bottom: 3rem;
+            }
+
+            .COnTent {
+            height: 100%;
+            background: #749C07;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            }
+
+            .COnTent .titulo {
+            font-family: 'Cairo';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 12px;
+            color: #FFFFFF;
+
+            }
+
+
+            #liSt {
+            display: flex;
+            width: max-content;
+            }
+
+            #FormList {
+
+            overflow: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: both;
+
+            }
+
+            .ddddd {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+            .pintura {
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            opacity: 0.5;
+            text-align: center;
+            }
+
+            .pintura p {
+            padding: 10px;
+            }
+
+            #FormList::-webkit-scrollbar {
+            display: none;
+            }
+
+            @media screen and (max-width: 1024px) {
+            .Item {
+            width: calc(33.3vw - 20px);
+            }
+
+            .direction {
+            display: none;
+            }
+            }
+
+            @media screen and (max-width: 768px) {
+            .Item {
+            width: calc(40vw - 20px);
+            }
+
+            .direction {
+            display: none;
+            }
+            }
+
+            @media screen and (max-width: 640px) {
+            .Item {
+            width: calc(100vw - 40px);
+            }
+
+            .direction {
+            display: none;
+            }
+
+            .fontcard {
+            width: 200px;
+            }
+
+            .imgbox {
+            width: initial;
+            height: initial;
+            }
+
+            .COnTent {
+            justify-content: space-evenly;
+            }
+
+            .custommb-5 {
+            margin-bottom: 0;
+            }
+
+            .caption {
+            padding-bottom: 0;
+            padding-top: 10px;
+            }
+            }
+
+            #FormList center {
+            margin-top: 40px;
+
+            }
+
+            /* banner*/
+
+            .BANNER {
+
+            background: linear-gradient(193.37deg, #000000 -26.34%, rgba(0, 0, 0, 0) 138.81%);
+
+            border: 0px solid #000;
+            width: 100%;
+            padding: 30px 0;
+            opacity: 0.7;
+            bottom: 0;
+            position: absolute;
+
+            }
+
+            .BANNER .intro {
+            width: 80%;
+            background-color: #000;
+
+
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            border-radius: 30px;
+            display: flex;
+
+
+            color: #fff;
+            justify-content: space-around;
+            }
+
+
+            .nome {
+            border: 2px solid #fff;
+            height: 150px;
+            }
+
+            .BANNER .intro p {
+            color: #fff;
+            text-align: center;
+            text-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+            font-family: Montserrat;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            }
+
+            .BANNER .intro span {
+            color: #fff;
+            text-align: center;
+            font-family: Montserrat;
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 200;
+            line-height: normal;
+            }
+
+            @media only screen and (max-width: 768px) {
+            .BANNER {
+            width: 100%;
+            padding: initial;
+            }
+
+            /*.BANNER .intro {
+            width: 100%;
+            }
+            */
+
+            .direita {
+            width: 100%;
+            }
+
+            .BANNER .intro p {
+            font-size: 20px;
+            }
+
+            .meio {
+            width: 80%;
+            }
+
+            .esquerda {
+            width: 100%;
+            }
+
+            .nome {
+            border: 2px solid rgb(255, 255, 255);
+            height: 50px;
+
+            }
+
+            .BANNER .intro {
+            width: 100%;
+            padding: 20px;
+            border-radius: initial !important;
+            justify-content: space-between;
+            }
+
+            }
+        </style>
+
+        <section class="homepage">
+
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/ntizu/static/src/Imagens/Background1.png" class="d-block w-100 carousel-img"
+                             alt="..."/>
+                        <div class="caption carousel-captiontext-center mb-5">
+                            <div class="d-flex align-items-center w-100  justify-content-center mb-5">
+                                <div class="text-center">
+                                    <h4 class="font">Quer emprego ?</h4>
+                                    <h3 class="style">E só clicar</h3>
+                                    <p class="mb-0 style_p">Com a Ntizu pode aceder a vagas de emprego locais e
+                                        internacionais
+                                    </p>
+                                    <p class="style_p">Recrutamento não é uma batalha sem fim.</p>
+                                    <h3 class="custommb-5">Cadastre-se hoje e deixe-nos agilizar o processo para si</h3>
+                                </div>
+                            </div>
+
+                            <div class="container custommb-5">
+                                <div class="row">
+
+                                    <div>
+                                        <div class="ddddd">
+                                            <div id="FormList">
+                                                <div id="liSt">
+                                                    <div class="Item">
+                                                        <div class="COnTent">
+                                                            <div class="titulo ">
+                                                                <p class="mb-2">VagA de Engenheiro</p>
+                                                                <div>
+                                                                    <p class="fontcard">Captação de mão de obra
+                                                                        Análise do Curriculum Vitae
+                                                                        Formação
+                                                                    </p>
+                                                                </div>
+
+
+                                                            </div>
+
+                                                            <div class="text-center">
+                                                                <img class="imgbox"
+                                                                     src="/ntizu/static/src/Imagens/Caixaverde.png"
+                                                                     alt=""/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="Item">
+                                                        <div class="COnTent">
+                                                            <div class="titulo ">
+                                                                <p class="mb-2">VagA de Engenheiro</p>
+                                                                <div>
+                                                                    <p class="fontcard">Captação de mão de obra
+                                                                        Análise do Curriculum Vitae
+                                                                        Formação
+                                                                    </p>
+                                                                </div>
+
+
+                                                            </div>
+
+                                                            <div class="text-center">
+                                                                <img class="imgbox"
+                                                                     src="/ntizu/static/src/Imagens/Caixaverde.png"
+                                                                     alt=""/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="Item">
+                                                        <div class="COnTent">
+                                                            <div class="titulo ">
+                                                                <p class="mb-2">VagA de Engenheiro</p>
+                                                                <div>
+                                                                    <p class="fontcard">Captação de mão de obra
+                                                                        Análise do Curriculum Vitae
+                                                                        Formação
+                                                                    </p>
+                                                                </div>
+
+
+                                                            </div>
+
+                                                            <div class="text-center">
+                                                                <img class="imgbox"
+                                                                     src="/ntizu/static/src/Imagens/Caixaverde.png"
+                                                                     alt=""/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="Item">
+                                                        <div class="COnTent">
+                                                            <div class="titulo ">
+                                                                <p class="mb-2">VagA de Engenheiro</p>
+                                                                <div>
+                                                                    <p class="fontcard">Captação de mão de obra
+                                                                        Análise do Curriculum Vitae
+                                                                        Formação
+                                                                    </p>
+                                                                </div>
+
+
+                                                            </div>
+
+                                                            <div class="text-center">
+                                                                <img class="imgbox"
+                                                                     src="/ntizu/static/src/Imagens/Caixaverde.png"
+                                                                     alt=""/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="BANNER mt-5">
+                        <div class="intro">
+                            <div class="esquerda">
+                                <center>
+                                    <p>
+                                        5000
+                                    </p>
+                                    Pré-inscritos
+                                </center>
+                            </div>
+
+                            <div class="nome">
+
+                            </div>
+
+                            <div class="meio">
+                                <center>
+                                    <p>
+                                        06
+                                    </p>
+                                    Pré-inscritos
+                                </center>
+                            </div>
+
+                            <div class="nome">
+
+                            </div>
+
+                            <div class="direita">
+                                <center>
+                                    <p>
+                                        2340
+                                    </p>
+                                    Pré-inscritos
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </template>
+
+
+</odoo>

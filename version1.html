@@ -1,0 +1,81 @@
+<div id="wrap" class="oe_structure">
+    <section class="s_cover parallax s_parallax_is_fixed o_colored_level pt16 o_half_screen_height"
+      data-scroll-background-ratio="1"
+      data-snippet="s_cover"
+      data-name="Cover"
+      style="background-image: none; height: 70vh; background-color: rgba(0, 0, 0, 0.68) !important;">
+  
+      <!-- Imagem de fundo -->
+      <div class="s_parallax_bg oe_img_bg o_bg_img_center"
+        style="background-image: url('/web/image/259647-b1035493/20250417_1029_Mozambique%20Culinary%20Delight_storyboard_01js1dwp1keabbjhf3gtk51p09.gif'); background-position: center top;">
+      </div>
+  
+      <!-- Filtro escuro transparente -->
+      <div class="o_we_bg_filter"
+        style="background-image: linear-gradient(135deg, rgba(222, 222, 222, 0.5) 0%, rgba(69, 69, 69, 0.5)) !important;">
+      </div>
+  
+      <!-- Menu de navegação centralizado -->
+      <div class="s_text_highlight o_colored_level text-center nav-links">
+        <a href="/" class="nav-btn">PÁGINA INICIAL</a>
+        <a href="/sobre-nos" class="nav-btn">SOBRE NÓS</a>
+        <a href="/catering" class="nav-btn">CATERING</a>
+        <a href="/decoracao" class="nav-btn">DECORAÇÃO</a>
+        <a href="/aluguer" class="nav-btn">ALUGUER</a>
+        <a href="/contactus" class="nav-btn">CONTACTO</a>
+      </div>
+    </section>
+  </div>
+  
+  <!-- CSS para responsividade e estilo -->
+  <style>
+    .nav-links {
+      border-radius: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      padding: 10px 15px;
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      max-width: 90%;
+    }
+  
+    .nav-btn {
+      font-family: 'Playfair Display', serif;
+      background-color: rgba(0, 0, 0, 0.68);
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      text-align: center;
+      flex: 1 0 auto;
+      transition: background-color 0.3s;
+    }
+  
+    .nav-btn:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+      }
+  
+      .nav-btn {
+        width: 100%;
+        max-width: 300px;
+        font-size: 14px;
+      }
+    }
+  </style>
+  
